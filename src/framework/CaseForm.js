@@ -241,7 +241,7 @@ class CaseForm extends React.Component {
         const validateItems = validatekeys.map((k) => {
             return (
                 <Row key={'validateItems' + k}>
-                    <Col span={8}>
+                    <Col span={7}>
                         <FormItem>
                             {getFieldDecorator('validateKey' + k, {
                                 rules: [{ required: true, message: 'Please input your validate key name!' }],
@@ -252,7 +252,7 @@ class CaseForm extends React.Component {
                                 )}
                         </FormItem>
                     </Col>
-                    <Col span={5} offset={1}>
+                    <Col span={6} offset={1}>
                         <FormItem>
                             {getFieldDecorator('comparator' + k, {
                             })(
@@ -260,11 +260,26 @@ class CaseForm extends React.Component {
                                     <Option value="eq">eq</Option>
                                     <Option value="str_eq">str_eq</Option>
                                     <Option value="len_eq">len_eq</Option>
+                                    <Option value="lt">lt</Option>
+                                    <Option value="le">le</Option>
+                                    <Option value="gt">gt</Option>
+                                    <Option value="ge">ge</Option>
+                                    <Option value="ne">ne</Option>
+                                    <Option value="len_gt">len_gt</Option>
+                                    <Option value="len_ge">len_ge</Option>
+                                    <Option value="len_lt">len_lt</Option>
+                                    <Option value="len_le">len_le</Option>
+                                    <Option value="contains">contains</Option>
+                                    <Option value="contains_by">contains_by</Option>
+                                    <Option value="type">type</Option>
+                                    <Option value="regex">regex</Option>
+                                    <Option value="startswith">startswith</Option>
+                                    <Option value="endswitch">endswitch</Option>
                                 </Select>
                                 )}
                         </FormItem>
                     </Col>
-                    <Col span={8} offset={1}>
+                    <Col span={7} offset={1}>
                         <FormItem>
                             {getFieldDecorator('validateValue' + k, {
                                 rules: [{ required: true, message: 'Please input your validate value name!' }],
@@ -276,7 +291,6 @@ class CaseForm extends React.Component {
                         </FormItem>
                     </Col>
                     <Col span={1}>
-
                         <Icon
                             className="dynamic-delete-button"
                             type="minus-circle-o"
